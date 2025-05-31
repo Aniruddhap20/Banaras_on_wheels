@@ -2,13 +2,21 @@ const styles = {
   topImageBox: {
     position: "relative",
     height: "50vh",
-    // width: "100%",
+    width: "100%",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "flex-end",
     padding: "40px 5%",
+    "@media (max-width: 600px)":{
+      topImageBox: {
+        height: "30vh",
+        padding: "20px 5%",
+      }
+    }
+
+    
   },
 
   headingTypography: {

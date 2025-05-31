@@ -28,6 +28,14 @@ const ContactUs = () => {
           sx={{
             ...styles.topImageBox,
             backgroundImage: `url(${templeImage})`,
+            backgroundSize: {
+            xs: "cover",  // Small screens = cover
+            md: "contain" // Medium & above = contain (full image visible)
+          },
+          backgroundPosition: {
+            xs: "center",
+            md: "top center" 
+    }
           }}
         >
           <Typography variant="h2" sx={styles.headingTypography}>
