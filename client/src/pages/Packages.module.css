@@ -1,0 +1,214 @@
+/* Packages.module.css */
+
+.packagesContainer {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 1rem;
+  background: none;
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.packagesTitle {
+  text-align: center;
+  color: #e65100;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.packageCard {
+  background: url('../assets/package_image.png') center/cover no-repeat;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+  padding: 2rem;
+  margin: 1rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+}
+
+.packageCard--center {
+  box-shadow: 0 12px 36px rgba(230,81,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+
+/* Add transition only for hover effects */
+.packageCard:hover {
+  transition: transform 0.3s cubic-bezier(.03,.98,.52,.99), box-shadow 0.3s;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.cardTitle {
+  background: rgba(255,255,255,0.85);
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #e65100;
+  display: inline-block;
+}
+
+.cardPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.cardFeatures {
+  text-align: left;
+  color: #fff;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+  box-shadow: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.cardFeatureItem {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.08rem;
+}
+
+.cardTick {
+  color: #00e676;
+  font-weight: bold;
+  margin-right: 0.7rem;
+  font-size: 1.3rem;
+}
+
+.cardButton {
+  background: #e65100;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.carouselArrow {
+  background: #fff;
+  border: 1px solid #e65100;
+  color: #e65100;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+}
+.carouselArrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cardCounter {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e65100;
+}
+
+.cardContainer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 900px) {
+  .cardsWrapper {
+    gap: 1rem;
+  }
+  .carouselArrow {
+    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .cardsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carouselArrow {
+    display: none;
+  }
+}
+
+.zoomedCard {
+  transform: scale(1.1);
+  z-index: 3;
+  box-shadow: 0 20px 48px rgba(230, 81, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.18);
+  border: 2px solid #ff9800;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+} 
